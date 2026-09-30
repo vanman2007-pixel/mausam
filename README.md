@@ -1,16 +1,174 @@
-# React + Vite
+# 🌦️ Mausam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Weather that answers, not reports.
 
-Currently, two official plugins are available:
+Mausam is a personalized weather experience designed to tell users what the weather actually means for their day — instead of overwhelming them with a dashboard full of numbers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Why Mausam?
 
-## React Compiler
+Most weather applications give users large amounts of information:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Temperature
+- Humidity
+- Wind
+- Rain probability
+- AQI
+- Forecasts
+- UV index
 
-## Expanding the ESLint configuration
+But users usually want a simpler answer:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> "Can I go for a run?"
+>
+> "Is it comfortable outside?"
+>
+> "Should I carry an umbrella?"
+>
+> "Is the air quality okay?"
+>
+> "When is the best time to go outside?"
+
+Mausam turns weather data into useful, personalized answers.
+
+---
+
+## ✨ Features
+
+### 🌤️ Personalized Weather
+
+Mausam adapts the weather experience around what matters to the user.
+
+Users can select interests such as:
+
+- Running & Fitness
+- Health & Air
+- Commute
+- Family & School
+- Travel
+- Farming & Garden
+- Beach & Outdoors
+- Events
+
+---
+
+### 💡 Weather Verdicts
+
+Instead of simply showing weather values, Mausam explains what those values mean.
+
+For example:
+
+> "Warm but comfortable. Winds are light and rain isn't currently a concern."
+
+Users can also open the **Why?** explanation to understand which weather factors produced the recommendation.
+
+---
+
+### 🎯 For You
+
+The homepage highlights information that is relevant to the user's selected interests.
+
+This avoids forcing users to navigate through multiple dashboards.
+
+---
+
+### 📍 Location Search
+
+Users can search for cities and instantly view weather information for that location.
+
+Mausam uses Open-Meteo's geocoding service for location search.
+
+---
+
+### 📌 Current Location
+
+Users can optionally allow browser location access to load weather for their current location.
+
+---
+
+### 🌡️ Current Conditions
+
+Mausam provides:
+
+- Temperature
+- Feels-like temperature
+- Humidity
+- Wind speed
+- Visibility
+- UV index
+- Air Quality Index
+- PM2.5
+
+---
+
+### ⏱️ Hourly Forecast
+
+Users can see upcoming hourly conditions including:
+
+- Temperature
+- Feels-like temperature
+- Rain probability
+- Weather conditions
+- UV index
+
+---
+
+### 📅 7-Day Forecast
+
+The application provides a seven-day forecast including:
+
+- Daily high
+- Daily low
+- Rain probability
+- Weather conditions
+- Sunrise
+- Sunset
+
+---
+
+### 🎬 Weather Atmosphere
+
+The interface changes its visual atmosphere based on current weather conditions, creating a more immersive experience instead of a static dashboard.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React
+- Vite
+- JavaScript
+- CSS
+
+### APIs
+
+- Open-Meteo Weather API
+- Open-Meteo Air Quality API
+- Open-Meteo Geocoding API
+
+### Storage
+
+- Browser LocalStorage
+
+No database or backend is required for the current MVP.
+
+---
+
+## 🧠 How It Works
+
+```text
+User
+  ↓
+Selects interests
+  ↓
+Searches location / uses current location
+  ↓
+Mausam fetches live weather data
+  ↓
+Weather + Air Quality data
+  ↓
+Personalization logic
+  ↓
+Useful weather verdicts
+  ↓
+Relevant recommendations
